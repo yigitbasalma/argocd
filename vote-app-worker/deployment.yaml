@@ -21,6 +21,6 @@ spec:
         - name: REDIS_HOST
           value: redis.vote-redis
         - name: POSTGRES_CONN_STRING
-          value: "Server=db.vote-postgresql;Username=postgres;Password=postgres;"
+          value: "Server=db.vote-postgresql.svc.cluster.local;Username=postgres;Password=postgres;"
       imagePullSecrets:
       - name: nexus
