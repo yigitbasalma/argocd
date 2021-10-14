@@ -17,8 +17,10 @@ spec:
       containers: 
       - image: dockersamples/examplevotingapp_worker
         name: worker
-      env:
-      - name: REDIS_HOST
-        value: redis.vote-redis
-      - name: POSTGRES_CONN_STRING
-        value: "Server=db.vote-postgres;Username=postgres;Password=postgres;"
+        env:
+        - name: REDIS_HOST
+          value: redis.vote-redis
+        - name: POSTGRES_CONN_STRING
+          value: "Server=db.vote-postgres;Username=postgres;Password=postgres;"
+      imagePullSecrets:
+      - name: nexus
