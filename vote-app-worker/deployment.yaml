@@ -15,12 +15,12 @@ spec:
         app: worker
     spec: 
       containers: 
-      - image: dockersamples/examplevotingapp_worker
+      - image: 192.168.56.10:8082/voteapp/voting-worker:latest
         name: worker
         env:
         - name: REDIS_HOST
           value: redis.vote-redis
         - name: POSTGRES_CONN_STRING
-          value: "Server=db.vote-postgresql.svc.cluster.local;Port=5432;Username=postgres;Password=postgres;"
+          value: "Server=db.vote-postgresql;Username=postgres;Password=postgres;"
       imagePullSecrets:
       - name: nexus
