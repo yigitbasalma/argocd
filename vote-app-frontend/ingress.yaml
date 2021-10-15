@@ -6,7 +6,7 @@ metadata:
   name: ingress-vote-frontend
 spec:
   rules:
-  - host: vote-app-frontend.local
+  - host: vote-app-frontend2.local
     http:
       paths:
       - path: /
