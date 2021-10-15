@@ -18,7 +18,7 @@ spec:
       - env:
         - name: REDIS_HOST
           value: redis.vote-redis
-        image: 192.168.56.10:8082/voteapp/voting-app:cbadsa
+        image: 192.168.56.10:8082/voteapp/voting-app:c
         name: vote
         ports:
         - containerPort: 80
